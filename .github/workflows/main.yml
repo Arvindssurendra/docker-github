@@ -6,9 +6,8 @@ on:
   pull_request:
     branches: ["main"]
 jobs:
-  Building_Image:
-    name: build cloud connect GW-AMI
-    runs-on: ubuntu:latest
+  build:
+    runs-on: ubuntu-latest
  #   container: 
   #   image: ubuntu:latest
    #  volumes: 
