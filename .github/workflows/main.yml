@@ -9,10 +9,10 @@ jobs:
   Building_Image:
     name: build cloud connect GW-AMI
     runs-on: ubuntu:latest
-    container: 
-     image: ubuntu:latest
-     volumes: 
-     - ${{ github.workspace }}:/app
+ #   container: 
+  #   image: ubuntu:latest
+   #  volumes: 
+    # - ${{ github.workspace }}:/app
    
       
     steps:
