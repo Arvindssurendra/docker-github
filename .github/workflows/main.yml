@@ -7,28 +7,29 @@ on:
     branches: ["main"]
 jobs:
   Building_Image:
-  name: build cloud connect GW-AMI
-   container: 
+    name: build cloud connect GW-AMI
+    runs-on: ubuntu:latest
+    container: 
      image: ubuntu:latest
      volumes: 
      - ${{ github.workspace }}:/app
    
       
-   steps:
-    - name: checkout repo
-      uses: actions/checkout@v3
+    steps:
+     - name: checkout repo
+       uses: actions/checkout@v3
 
-   - name: Set up Docker
-      uses: docker/setup-docker@v2
+     - name: Set up Docker
+       uses: docker/setup-docker@v2
 
-    - name: Build Docker image
-      run: docker build -t mycontainer .
+     - name: Build Docker image
+       run: docker build -t mycontainer .
 
-    - name: Run Docker container
-      run: docker run mycontainer
+     - name: Run Docker container
+       run: docker run mycontainer
     
 
-    - name: building image
-      run: |
+     - name: building image
+       run: |
          sudo nohup bash script.sh
-      shell: bash
+       shell: bash
